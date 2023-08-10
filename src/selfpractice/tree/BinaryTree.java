@@ -9,16 +9,34 @@ public class BinaryTree {
     public void preOrderTraversal() {
         Stack<Node> myStack = new Stack<>();
         Node tempNode = rootNode;
-        while (!myStack.isEmpty() || tempNode!=null){
-            if(tempNode.getRight()!=null){
+        while (!myStack.isEmpty() || tempNode != null) {
+            if (tempNode.getRight() != null) {
                 myStack.push(tempNode.getRight());
             }
             System.out.println(tempNode.getValue());
             tempNode = tempNode.getLeft();
-            if(tempNode==null && !myStack.isEmpty()){
+            if (tempNode == null && !myStack.isEmpty()) {
                 tempNode = myStack.pop();
             }
         }
+    }
+
+    public void postOrderTraversal() {
+        Stack<Node> myStack = new Stack<>();
+        Node tempNode = rootNode;
+
+        while (!myStack.isEmpty() || tempNode != null) {
+            if(tempNode.getLeft()!=null){
+                myStack.push(tempNode);
+            }
+            tempNode = tempNode.getLeft();
+            if(tempNode.getLeft()==null){
+                System.out.println(tempNode.getValue());
+            }
+
+
+        }
+
     }
 
     public void addNode(Integer value) {
