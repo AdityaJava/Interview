@@ -1,9 +1,26 @@
 package selfpractice.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class BinaryTree {
     Node rootNode;
+
+    public void levelOrderTraversing(){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(rootNode);
+        while(!queue.isEmpty()){
+            Node tempNode = queue.poll();
+            System.out.println(tempNode.getValue());
+            if(tempNode.getLeft()!=null){
+                queue.add(tempNode.getLeft());
+            }
+            if(tempNode.getRight()!=null){
+                queue.add(tempNode.getRight());
+            }
+        }
+    }
 
     //root-left-right
     public void preOrderTraversal() {
@@ -75,6 +92,7 @@ public class BinaryTree {
         myBinaryTree.addNode(7);
         myBinaryTree.addNode(100);
         myBinaryTree.addNode(5);
-        myBinaryTree.preOrderTraversal();
+        //myBinaryTree.preOrderTraversal();
+        myBinaryTree.levelOrderTraversing();
     }
 }
