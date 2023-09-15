@@ -7,16 +7,34 @@ import java.util.Stack;
 public class BinaryTree {
     Node rootNode;
 
-    public void levelOrderTraversing(){
+    public int findHeight(Node node) {
+        int lDepth, rDepth;
+        if (node == null) {
+            return 0;
+        } else {
+            lDepth = findHeight(node.getLeft());
+            rDepth = findHeight(node.getRight());
+        }
+
+        if (lDepth > rDepth) {
+            return lDepth+1;
+        } else {
+            return rDepth+1;
+        }
+
+    }
+
+    public void levelOrderTraversing() {
         Queue<Node> queue = new LinkedList<>();
         queue.add(rootNode);
-        while(!queue.isEmpty()){
+        int height = 0 ;
+        while (!queue.isEmpty()) {
             Node tempNode = queue.poll();
             System.out.println(tempNode.getValue());
-            if(tempNode.getLeft()!=null){
+            if (tempNode.getLeft() != null) {
                 queue.add(tempNode.getLeft());
             }
-            if(tempNode.getRight()!=null){
+            if (tempNode.getRight() != null) {
                 queue.add(tempNode.getRight());
             }
         }
@@ -43,11 +61,11 @@ public class BinaryTree {
         Node tempNode = rootNode;
 
         while (!myStack.isEmpty() || tempNode != null) {
-            if(tempNode.getLeft()!=null){
+            if (tempNode.getLeft() != null) {
                 myStack.push(tempNode);
             }
             tempNode = tempNode.getLeft();
-            if(tempNode.getLeft()==null){
+            if (tempNode.getLeft() == null) {
                 System.out.println(tempNode.getValue());
             }
 
@@ -94,5 +112,6 @@ public class BinaryTree {
         myBinaryTree.addNode(5);
         //myBinaryTree.preOrderTraversal();
         myBinaryTree.levelOrderTraversing();
+        System.out.println("Height of binary tree= "+myBinaryTree.findHeight(myBinaryTree.rootNode));
     }
 }
