@@ -18,6 +18,6 @@ public class Zymr {
         employeeIntegerMap.put(employee3, 4);
         employeeIntegerMap.put(employee4, 5);
 
-        System.out.println(employeeIntegerMap.get(employee4));
+        System.out.println(employeeIntegerMap.get(employee2));
     }
 }
