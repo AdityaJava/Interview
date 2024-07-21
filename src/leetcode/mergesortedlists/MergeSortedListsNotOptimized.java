@@ -3,7 +3,7 @@ package leetcode.mergesortedlists;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeSortedLists {
+public class MergeSortedListsNotOptimized {
 
     public static ArrayList<Integer> findUnion(int arr1[], int arr2[], int n, int m) {
 
@@ -59,7 +59,7 @@ public class MergeSortedLists {
         int arr2[] = {-9, -9, 0};
 
 
-        List<Integer> list3 = MergeSortedLists.findUnion(arr1, arr2, arr1.length, arr2.length);
+        List<Integer> list3 = MergeSortedListsNotOptimized.findUnion(arr1, arr2, arr1.length, arr2.length);
         System.out.println("saa");
     }
 }
