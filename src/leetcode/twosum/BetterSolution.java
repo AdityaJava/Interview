@@ -27,6 +27,11 @@ Output: [0,1]
 
  */
 
+
+//This is better and also optimal solution for this kind of problem
+//But for yes or no question like to tell only if that there are 2 numbers which sums upto the given number there is optimal
+//solution
+
 import java.util.HashMap;
 import java.util.Map;
 
