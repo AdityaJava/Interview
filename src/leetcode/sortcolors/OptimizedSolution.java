@@ -1,4 +1,4 @@
-package leetcode.dutchnationalflagalgo.sortcolors;
+package leetcode.sortcolors;
 
 /* Problem
 Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
@@ -40,8 +40,8 @@ high=n-1
 video link: https://www.youtube.com/watch?v=tp8JIuCXBaU
 */
 
-
-public class SortColors {
+// DUtch National FLag ALgo
+public class OptimizedSolution {
 
     public void sortColors(int[] nums) {
 
@@ -69,7 +69,7 @@ public class SortColors {
 
     public static void main(String[] args) {
         int[] nums = {2, 0, 2, 1, 1, 0};
-        SortColors sortColors = new SortColors();
+        OptimizedSolution sortColors = new OptimizedSolution();
         sortColors.sortColors(nums);
         System.out.println("mj");
     }
