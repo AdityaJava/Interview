@@ -34,7 +34,7 @@ public class RecurringPermutation {
 
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = {1, 2, 3};
         RecurringPermutation recurringPermutation = new RecurringPermutation();
         List<List<Integer>> answers = recurringPermutation.getPermutations(nums);
 
