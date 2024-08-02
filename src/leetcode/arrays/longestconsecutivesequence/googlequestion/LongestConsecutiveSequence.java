@@ -27,6 +27,8 @@ Output:
 Explanation:
  The longest consecutive subsequence is 5, 6, 7, and 8.
  */
+
+//https://www.geeksforgeeks.org/problems/longest-consecutive-subsequence2449/1
 public class LongestConsecutiveSequence {
 
     private int findLongestConsecutiveSequence(int[] arr) {
@@ -37,21 +39,6 @@ public class LongestConsecutiveSequence {
         int nextElement;
         int count = 0;
         int maxCount = 0;
-
-//        for (Integer element : elements) {
-//            if (!elements.contains(element - 1)) {
-//                count++;
-//                nextElement = elements.contains(element + 1) ? element + 1 : -1;
-//                while (elements.contains(nextElement)) {
-//                    count++;
-//                    nextElement++;
-//                }
-//                if (maxCount < count) {
-//                    maxCount = count;
-//                    count = 0;
-//                }
-//            }
-//        }
 
         Iterator<Integer> elementIterator = elements.iterator();
 
