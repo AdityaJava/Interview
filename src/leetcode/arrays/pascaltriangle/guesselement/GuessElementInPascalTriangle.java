@@ -6,7 +6,7 @@ public class GuessElementInPascalTriangle {
 
     //[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
     // row=3 column=2 answer=2
-    private int guessElementInPascalTriangleByRowAndColumn(int rowNumber, int columnNumber) {
+    private int guessElementInPascalTriangleByRowAndColumnBruteForce(int rowNumber, int columnNumber) {
         int n = rowNumber - 1;
         int r = columnNumber - 1;
 
@@ -20,6 +20,18 @@ public class GuessElementInPascalTriangle {
         return element;
     }
 
+    //Optimal solution to find nCr
+    private Long guessElementInPascalTriangleByRowAndColumnOptimal(int rowNumber, int columnNumber) {
+        int n = rowNumber - 1;
+        int r = columnNumber - 1;
+        long result = 1;
+        for (int i = 0; i < r; i++) {
+            result = result * (n - i);
+            result = result / (i + 1);
+        }
+        return result;
+    }
+
     private int factorial(int n) {
         if (n == 1) {
             return 1;
@@ -30,7 +42,9 @@ public class GuessElementInPascalTriangle {
 
     public static void main(String[] args) {
         GuessElementInPascalTriangle guessElementInPascalTriangle = new GuessElementInPascalTriangle();
-        int element = guessElementInPascalTriangle.guessElementInPascalTriangleByRowAndColumn(3, 2);
+        int element = guessElementInPascalTriangle.guessElementInPascalTriangleByRowAndColumnBruteForce(3, 2);
         System.out.println(element);
+        long element1 = guessElementInPascalTriangle.guessElementInPascalTriangleByRowAndColumnOptimal(3, 2);
+        System.out.println(element1);
     }
 }
