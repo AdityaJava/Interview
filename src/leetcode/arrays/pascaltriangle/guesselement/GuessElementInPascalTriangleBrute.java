@@ -1,6 +1,6 @@
 package leetcode.arrays.pascaltriangle.guesselement;
 
-public class GuessElementInPascalTriangle {
+public class GuessElementInPascalTriangleBrute {
     // Calculate combination by  r-1 C c-1 =
     // Combination formula n C r = n! / (r! * (n-r)!)
 
@@ -41,10 +41,10 @@ public class GuessElementInPascalTriangle {
     }
 
     public static void main(String[] args) {
-        GuessElementInPascalTriangle guessElementInPascalTriangle = new GuessElementInPascalTriangle();
-        int element = guessElementInPascalTriangle.guessElementInPascalTriangleByRowAndColumnBruteForce(3, 2);
+        GuessElementInPascalTriangleBrute guessElementInPascalTriangleBrute = new GuessElementInPascalTriangleBrute();
+        int element = guessElementInPascalTriangleBrute.guessElementInPascalTriangleByRowAndColumnBruteForce(3, 2);
         System.out.println(element);
-        long element1 = guessElementInPascalTriangle.guessElementInPascalTriangleByRowAndColumnOptimal(3, 2);
+        long element1 = guessElementInPascalTriangleBrute.guessElementInPascalTriangleByRowAndColumnOptimal(3, 2);
         System.out.println(element1);
     }
 }
