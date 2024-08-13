@@ -1,4 +1,4 @@
-package leetcode.binarysearch;
+package leetcode.binarysearch.onedimenarrays.binarysearch;
 
 //USed to search on Sorted array
 public class BinarySearch {
