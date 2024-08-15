@@ -2,6 +2,7 @@ package leetcode.binarysearch.onedimenarrays.FindHowManyTimesRotationIsDone;
 
 import java.util.List;
 
+//This code is same as FindMinimumInRotatedSorterArray
 public class FindHowManyTimesRotationIsDone {
 
     private int findHowManyTimesRotationIsDone(List<Integer> arr) {
