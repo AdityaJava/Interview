@@ -43,6 +43,7 @@ public class NextPermutation {
             reverseFrom(nums, dipIndex + 1, nums.length - 1);
         }
         //This is used in case of last permutation in that case we return first permutation
+        //This is for end permutation like for [3,2,1] the ans will be[1,2,3]
         else {
             reverseFrom(nums, 0, nums.length - 1);
         }

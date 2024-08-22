@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ArrayLeaders {
-    private ArrayList<Integer> leaderInArray(int[] nums, int n) {
-
+    private ArrayList<Integer> leaderInArray(int n, int[] nums) {
         int leader = nums[n - 1];
         ArrayList<Integer> leaders = new ArrayList<>();
 
@@ -24,7 +23,7 @@ public class ArrayLeaders {
         int arr[] = {16, 17, 4, 3, 5, 2};
 //        int arr[] = {9985, 9985, 8736, 8543, 7987, 6259 3725 867};
         ArrayLeaders arrayLeaders = new ArrayLeaders();
-        arrayLeaders.leaderInArray(arr, arr.length).forEach(e -> {
+        arrayLeaders.leaderInArray(arr.length, arr).forEach(e -> {
             System.out.println(e);
         });
     }
