@@ -1,8 +1,9 @@
 package leetcode.binarysearch.answers.CapacityToShipPackagesWithindDays;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
-public class CapacityToShipPackagesWithindDays {
+public class CapacityToShipPackagesWithindDays2 {
 
     public int shipWithinDays(int[] weights, int days) {
         List<Integer> maxAndSum = getMaxAndSum(weights);
@@ -30,20 +31,17 @@ public class CapacityToShipPackagesWithindDays {
     }
 
     private boolean isPossibleToShipWithCapacity(int[] weights, int capacity, int days) {
-        int daysUsed = 1;
-        int sumOfWeights = 0;
+        int weightsSum = 0;
+        int dayUsed = 0;
         for (int i = 0; i < weights.length; i++) {
-            sumOfWeights += weights[i];
-            if (sumOfWeights > capacity) {
-                sumOfWeights = weights[i];
-                daysUsed++;
-            }
-            if (sumOfWeights == capacity) {
-                sumOfWeights = 0;
-                daysUsed++;
+            weightsSum += weights[i];
+            if (weightsSum > capacity) {
+                dayUsed++;
+                weightsSum = weights[i];
             }
         }
-        if (daysUsed <= days) {
+        dayUsed++;
+        if (dayUsed <= days) {
             return true;
         }
         return false;
@@ -61,16 +59,16 @@ public class CapacityToShipPackagesWithindDays {
     }
 
     public static void main(String[] args) {
-//        int[] weights = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//        int days = 5;
+        int[] weights = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int days = 5;
+        //ans = 15
 
-//        int[] weights = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//        int days = 1;
+//        int[] weights = {3, 3, 3, 3, 3, 3};
+//        int days = 2;
+        //ans=9
 
-        int[] weights = {3, 3, 3, 3, 3, 3};
-        int days = 2;
+        CapacityToShipPackagesWithindDays2 capacityToShipPackagesWithindDays2 = new CapacityToShipPackagesWithindDays2();
+        System.out.println(capacityToShipPackagesWithindDays2.shipWithinDays(weights, days));
 
-        CapacityToShipPackagesWithindDays capacityToShipPackagesWithindDays = new CapacityToShipPackagesWithindDays();
-        System.out.println(capacityToShipPackagesWithindDays.shipWithinDays(weights, days));
     }
 }
