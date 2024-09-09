@@ -18,11 +18,9 @@ public class SplitArray {
             currentArrayCapacity = calculateCurrentArrayCapacity(arr, mid, k);
             if (currentArrayCapacity == -1) {
                 low = mid + 1;
-            } else if (currentArrayCapacity == 0) {
+            } else if (currentArrayCapacity == 0 || currentArrayCapacity == 1) {
                 high = mid - 1;
                 answer = mid;
-            } else if (currentArrayCapacity == 1) {
-                high = mid - 1;
             }
         }
         return answer;
@@ -32,9 +30,7 @@ public class SplitArray {
         int sum = 0;
         int numberOfSubarrays = 1;
         for (int i = 0; i < nums.size(); i++) {
-            if (sum <= arrayCapacity) {
-                sum = sum + nums.get(i);
-            }
+            sum = sum + nums.get(i);
             if (sum > arrayCapacity) {
                 sum = nums.get(i);
                 numberOfSubarrays++;
@@ -66,11 +62,11 @@ public class SplitArray {
 //        int [] nums = {7, 2, 5, 10, 8};
 //
 
-        int k = 2;
-        int[] nums = {1, 2, 3, 4, 5};
+//        int k = 2;
+//        int[] nums = {1, 2, 3, 4, 5};
 
-//        int k = 5;
-//        int[] nums = {2, 3, 1, 1, 1, 1, 1};
+        int k = 5;
+        int[] nums = {2, 3, 1, 1, 1, 1, 1};
 
         System.out.println(splitArray.splitArray(nums, k));
     }
