@@ -1,17 +1,17 @@
 package selfpractice.stream;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
 //Find first duplicate using stream
 //Here first duplicate is m
 public class FindFirstDuplicate {
     public static void main(String[] args) {
-        String s = "my name is Aditya";
-        List<String> strings = Arrays.asList(s.split(""));
+        List<String> strings = Arrays.asList("Krishna", "Vitthal", "Narayan", "Keshav", "Narayan", "Vitthal");
 
-        Set<String> stringSet = new HashSet<>();
+        Set<String> stringSet = new LinkedHashSet<>();
 
-        Optional<String> stringOptional =  strings.stream().filter(s1 -> stringSet.add(s1)).findFirst();
-        System.out.println(stringOptional.get());
-
+        List<String> duplicateStrings = strings.stream().filter(string -> !stringSet.add(string)).collect(Collectors.toList());
+        System.out.println(duplicateStrings);
     }
 }

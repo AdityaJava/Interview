@@ -8,11 +8,21 @@ public class Employee {
     private Integer age;
     private Integer experience;
 
+    private Double salary;
+
     public Employee(Integer employeeId, String name, Integer age, Integer experience) {
         this.employeeId = employeeId;
         this.name = name;
         this.age = age;
         this.experience = experience;
+    }
+
+    public Employee(Integer employeeId, String name, Integer age, Integer experience, Double salary) {
+        this.employeeId = employeeId;
+        this.name = name;
+        this.age = age;
+        this.experience = experience;
+        this.salary = salary;
     }
 
     public Integer getEmployeeId() {
@@ -54,6 +64,15 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", experience=" + experience +
+                ", salary=" + salary +
                 '}';
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 }
