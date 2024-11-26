@@ -17,7 +17,7 @@ public class Employee {
 
     @Override
     public boolean equals(Object obj) {
-        return false;
+        return true;
     }
 
     public Integer getEmployeeId() {
