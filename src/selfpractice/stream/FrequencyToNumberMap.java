@@ -10,6 +10,7 @@ public class FrequencyToNumberMap {
     public static void main(String[] args) {
         List<Integer> duplicates = Arrays.asList(1, 2, 3, 2, 1, 2, 3, 4, 2, 2, 2);
         Map<Integer, Long> numToFreq = duplicates.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        duplicates.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(numToFreq);
     }
 }

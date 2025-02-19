@@ -20,6 +20,7 @@ public class GroupingBySalaryAndSum {
         Map<Double, Double> salaryToDouble = employeeList.stream()
                 .collect(Collectors.groupingBy(Employee::getSalary, Collectors.summingDouble(Employee::getSalary)));
 
+        employeeList.stream().collect(Collectors.groupingBy(Employee::getSalary, Collectors.summingDouble(Employee::getSalary)));
         System.out.println(salaryToDouble);
     }
 
