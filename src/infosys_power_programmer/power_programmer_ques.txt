@@ -1,0 +1,24 @@
+1. Given a number find the count of zeros occurring from 0 till the given number
+
+2. In my technical interview , I was asked to write code for 2 questions. One was substring related and another one was merge sort algorithm.
+
+3. Tell me about the ACID properties?
+
+4. Starting node of Linked list loop
+
+5. Questions are based on java and DSA concepts like stack, BST, strings.
+
+6. Find the min and max numbers in an array, in one pass.
+
+7. What is difference between unique and primary key
+
+8. How to secure password other than hashing
+
+9. Leetcode medium , integer to roman question
+
+10. one SQL query which involved joins
+
+11. Rotate the array k number of times
+
+12.Explain map. Java equality contract. Algorithms question.
+

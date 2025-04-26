@@ -1,4 +1,4 @@
-package selfpractice.stream;
+package stream;
 
 public class Person {
     private String name;
