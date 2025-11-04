@@ -1,0 +1,27 @@
+REST
+
+1. api/v1/employees
+
+2. Validations using spring boot
+
+3. JWT validations via commonlib 
+
+4. Service layer
+
+5. Repository -> Spring Data JPA -> Hibernate as implementor
+
+6. DB PLSQL from Oracle.
+
+--------------------------------------------------------------
+1. when query takes more time
+   -> SQLTimeout exception
+    - Index
+    - View
+    - Check plan of the query
+    - Ans: Performance testing we can do. JMeter
+
+2. hint in sql
+
+----------------------------------------------------
+
+

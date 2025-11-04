@@ -1,0 +1,35 @@
+input
+
+1. MS-A producer
+2. MS-B consumer
+3. MS-C consumer
+
+----
+
+consumers had only few messages say 64.
+Expectation is 100 messages shall be received.
+Kafka dashboard says there is no lag
+
+0. A might be down. Check downtime of A
+1. AWS network issue.
+1. A might've cause exceptions
+2. Check error SQS's for consumers
+
+---------------------------------------------
+Increase resource in k8s
+
+---------------------------------------------
+kubectl -n prod delete pod name_pod
+
+----------------------------------------------
+modified JWT 
+
+----------------------------------------------
+
+
+
+
+
+
+
+

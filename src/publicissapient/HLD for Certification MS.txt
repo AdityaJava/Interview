@@ -1,0 +1,18 @@
+HLD for Certification MS
+
+1. OLD -> PLSQL
+2. New -> JAVA
+
+
+--------------------------------
+1. Reservation -> Date
+2. Payment
+3. Checkout
+
+------------------------------
+1. Invoices - 16
+
+
+-------------------- EVent driven arch
+1-4
+----------------------------

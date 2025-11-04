@@ -26,11 +26,11 @@ public class GroupingByPractice {
             System.out.println(key + " " + ageToEmployee.get(key));
         });
 
-        Map<String, Double> salaryByDept = employees.stream()
-                .collect(Collectors.groupingBy(
-                        Employee::getDepartment,
-                        Collectors.summingDouble(Employee::getSalary)
-                ));
+//        Map<String, Double> salaryByDept = employeeList.stream()
+//                .collect(Collectors.groupingBy(
+//                        Employee::getDepartment,
+//                        Collectors.summingDouble(Employee::getSalary)
+//                ));
 
     }
 

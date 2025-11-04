@@ -1,0 +1,82 @@
+input
+
+1. Sort the numeric 
+2. Try to follow design principles and Java principles
+3. Should be enhanced.
+4. Should cover all edge cases.
+5. Review code
+--------------------------------------------------------
+
+// input
+
+// 1. Sort the numeric 
+// 2. Try to follow design principles and Java principles
+// 3. Should be enhanced.
+// 4. Should cover all edge cases.
+// 5. Review code
+// --------------------------------------------------------
+
+// 1. ACCP criteria
+// 2. Design princ -> No docs, Design principle, 
+// 3. Requirement gathering spend more time about enhancement, order of sorting
+// 4. Violated 
+
+// 5. SOLID: Did not use interface. 
+// input
+
+// 1. Sort the numeric
+// 2. Try to follow design principles and Java principles
+// 3. Should be enhanced.
+// 4. Should cover all edge cases.
+// 5. Review code
+// --------------------------------------------------------
+
+// 1. ACCP criteria
+// 2. Design princ -> No docs, Design principle,
+// 3. Requirement gathering spend more time about enhancement, order of sorting
+// 4. Violated
+
+// 5. SOLID: Did not use interface.
+
+
+
+class MySort<T>{
+
+  public List<T> sort(List<T> input){
+    if(input== null || input.size()==0){
+      return new ArrayList<T>();
+    }
+    return input.stream().sorted().collect(Collectors.toList());
+  }
+
+}
+
+// Millions of data
+// Sorting and performance
+// Array and TreeSet
+//
+
+class MyCode {
+	public static void main (String[] args) {
+    // MySort<Integer> mysort = new MySort<>();
+    // List<Integer> input = new ArrayList<>();
+    // input.add(2);
+    // input.add(9);
+    // input.add(3);
+    // input.add(6);
+    // input.add(1);
+    // mysort.sort(input).forEach(System.out::println);
+
+    //     MySort<String> mysort = new MySort<>();
+    // List<String> input = new ArrayList<>();
+    // input.add("b");
+    // input.add("a");
+    // input.add("f");
+    // input.add("g");
+    // mysort.sort(input).forEach(System.out::println);
+
+    MySort<String> mysort = new MySort<>();
+    mysort.sort(null).forEach(System.out::println);
+
+	}
+}

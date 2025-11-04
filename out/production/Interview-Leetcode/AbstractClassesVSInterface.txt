@@ -1,0 +1,93 @@
+Java: Interface vs Abstract Class
+----------------------------------
+
+Quick Summary:
+
+Interface:
+- Defines a contract (what to do).
+- All methods are abstract by default (until Java 8).
+- Cannot have constructors.
+- All variables are public static final (constants).
+- A class can implement multiple interfaces.
+- Use when classes are unrelated but share common capabilities.
+
+Abstract Class:
+- Defines a base class with partial implementation (how to do).
+- Can have both abstract and concrete methods.
+- Can have constructors.
+- Can have all types of variables.
+- A class can extend only one abstract class.
+- Use when classes are closely related and share code/state.
+
+--------------------------------------------------------------
+
+When to Use Interface:
+----------------------
+- You want to define a common behavior (like Flyable, Serializable).
+- You want to achieve multiple inheritance.
+- The classes are not part of the same hierarchy.
+
+Example:
+interface Flyable {
+    void fly();
+}
+
+class Bird implements Flyable {
+    public void fly() {
+        System.out.println("Bird flies");
+    }
+}
+
+class Drone implements Flyable {
+    public void fly() {
+        System.out.println("Drone flies");
+    }
+}
+
+--------------------------------------------------------------
+
+When to Use Abstract Class:
+---------------------------
+- You want to share code among closely related classes.
+- You want to define non-static or non-final fields.
+- You want to provide default behavior and force subclasses to implement specific methods.
+
+Example:
+abstract class Vehicle {
+    int speed;
+
+    Vehicle(int speed) {
+        this.speed = speed;
+    }
+
+    abstract void start();
+
+    void stop() {
+        System.out.println("Vehicle stopped");
+    }
+}
+
+class Car extends Vehicle {
+    Car(int speed) {
+        super(speed);
+    }
+
+    void start() {
+        System.out.println("Car starting at speed: " + speed);
+    }
+}
+
+--------------------------------------------------------------
+
+Rule of Thumb:
+--------------
+Use Interface when:
+- You want to define a contract.
+- You need multiple inheritance.
+- Classes are unrelated.
+
+Use Abstract Class when:
+- Classes share common behavior.
+- You need to write partial implementation.
+- You want constructors or non-final fields.
+
